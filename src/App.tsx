@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Plus, Mail, Users, TrendingUp, Image, Send, Clock, CheckCircle, AlertCircle, Download, Upload, Filter, BarChart3, Calendar, Eye, Edit, Trash2, RefreshCw } from 'lucide-react';
+import { useState } from 'react';
+import { Search, Plus, Mail, Users, TrendingUp, Image, Send, Clock, CheckCircle, AlertCircle, Download, BarChart3, Eye, Trash2 } from 'lucide-react';
 
 // CONFIGURATION - Replace these with your actual N8N webhook URLs
 const N8N_CONFIG = {
@@ -22,7 +22,7 @@ const PartnershipDashboard = () => {
     { id: 6, email: 'business6@example.com', businessName: 'Food Services', industry: 'Food & Beverage', status: 're_engagement', stage: 5, addedDate: '2025-09-01', formSubmitted: false, lastEmailDate: '2025-11-08' },
   ]);
   
-  const [submissions, setSubmissions] = useState([
+  const [submissions] = useState([
     { id: 1, businessName: 'Marketing Pro', email: 'business2@example.com', photos: ['https://via.placeholder.com/300', 'https://via.placeholder.com/300'], submittedDate: '2025-11-04' },
     { id: 2, businessName: 'Design Studio', email: 'business3@example.com', photos: ['https://via.placeholder.com/300'], submittedDate: '2025-10-16' },
   ]);
