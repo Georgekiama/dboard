@@ -39,11 +39,11 @@ const PartnershipDashboard = () => {
   const [showCampaignModal, setShowCampaignModal] = useState(false);
 
   const emailStages = [
-    { id: 1, name: 'Initial Email', description: 'Form request sent', icon: Mail, color: 'bg-blue-500' },
-    { id: 2, name: 'Welcome', description: 'Form submitted', icon: CheckCircle, color: 'bg-green-500' },
-    { id: 3, name: 'Listed', description: 'Listed on page', icon: TrendingUp, color: 'bg-purple-500' },
-    { id: 4, name: 'Monthly Reminder', description: '1 month follow-up', icon: Clock, color: 'bg-orange-500' },
-    { id: 5, name: 'Re-engagement', description: 'Final outreach', icon: Send, color: 'bg-red-500' },
+    { id: 1, name: 'Initial Email', description: 'Form request sent', icon: Mail, color: 'bg-red-800' },
+    { id: 2, name: 'Welcome', description: 'Form submitted', icon: CheckCircle, color: 'bg-red-700' },
+    { id: 3, name: 'Listed', description: 'Listed on page', icon: TrendingUp, color: 'bg-red-600' },
+    { id: 4, name: 'Monthly Reminder', description: '1 month follow-up', icon: Clock, color: 'bg-gray-800' },
+    { id: 5, name: 'Re-engagement', description: 'Final outreach', icon: Send, color: 'bg-gray-700' },
   ];
 
   // Calculate statistics
@@ -243,56 +243,56 @@ const PartnershipDashboard = () => {
     <div className="space-y-6">
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-        <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg p-6 text-white">
+        <div className="bg-gradient-to-br from-red-800 to-red-900 rounded-xl shadow-lg p-6 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-blue-100 text-sm font-medium">Total Contacts</p>
+              <p className="text-red-100 text-sm font-medium">Total Contacts</p>
               <p className="text-3xl font-bold mt-1">{stats.total}</p>
-              <p className="text-xs text-blue-100 mt-1">+{stats.thisWeek} this week</p>
+              <p className="text-xs text-red-100 mt-1">+{stats.thisWeek} this week</p>
             </div>
             <Users size={40} className="opacity-80" />
           </div>
         </div>
         
-        <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-xl shadow-lg p-6 text-white">
+        <div className="bg-gradient-to-br from-red-700 to-red-800 rounded-xl shadow-lg p-6 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-green-100 text-sm font-medium">Forms Submitted</p>
+              <p className="text-red-100 text-sm font-medium">Forms Submitted</p>
               <p className="text-3xl font-bold mt-1">{stats.formSubmitted}</p>
-              <p className="text-xs text-green-100 mt-1">{stats.responseRate}% rate</p>
+              <p className="text-xs text-red-100 mt-1">{stats.responseRate}% rate</p>
             </div>
             <CheckCircle size={40} className="opacity-80" />
           </div>
         </div>
         
-        <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg p-6 text-white">
+        <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-xl shadow-lg p-6 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-purple-100 text-sm font-medium">Listed Partners</p>
+              <p className="text-red-100 text-sm font-medium">Listed Partners</p>
               <p className="text-3xl font-bold mt-1">{stats.listed}</p>
-              <p className="text-xs text-purple-100 mt-1">Active listings</p>
+              <p className="text-xs text-red-100 mt-1">Active listings</p>
             </div>
             <TrendingUp size={40} className="opacity-80" />
           </div>
         </div>
         
-        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-lg p-6 text-white">
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-lg p-6 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-orange-100 text-sm font-medium">Response Rate</p>
+              <p className="text-gray-100 text-sm font-medium">Response Rate</p>
               <p className="text-3xl font-bold mt-1">{stats.responseRate}%</p>
-              <p className="text-xs text-orange-100 mt-1">Conversion</p>
+              <p className="text-xs text-gray-100 mt-1">Conversion</p>
             </div>
             <BarChart3 size={40} className="opacity-80" />
           </div>
         </div>
         
-        <div className="bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl shadow-lg p-6 text-white">
+        <div className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl shadow-lg p-6 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-pink-100 text-sm font-medium">Submissions</p>
+              <p className="text-gray-100 text-sm font-medium">Submissions</p>
               <p className="text-3xl font-bold mt-1">{submissions.length}</p>
-              <p className="text-xs text-pink-100 mt-1">With photos</p>
+              <p className="text-xs text-gray-100 mt-1">With photos</p>
             </div>
             <Image size={40} className="opacity-80" />
           </div>
@@ -305,7 +305,7 @@ const PartnershipDashboard = () => {
           <h2 className="text-xl font-bold text-gray-900">Email Journey Pipeline</h2>
           <button 
             onClick={() => setShowCampaignModal(true)}
-            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition shadow-md"
+            className="flex items-center gap-2 bg-gradient-to-r from-red-800 to-red-900 text-white px-4 py-2 rounded-lg hover:from-red-900 hover:to-gray-900 transition shadow-md"
           >
             <Send size={18} />
             Launch Campaign
@@ -412,7 +412,7 @@ const PartnershipDashboard = () => {
           <input
             type="text"
             placeholder="Search contacts..."
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -420,7 +420,7 @@ const PartnershipDashboard = () => {
         
         <div className="flex gap-2 flex-wrap">
           <select
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800"
             value={filterStage}
             onChange={(e) => setFilterStage(e.target.value)}
           >
@@ -431,7 +431,7 @@ const PartnershipDashboard = () => {
           </select>
           
           <select
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800"
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
           >
@@ -442,7 +442,7 @@ const PartnershipDashboard = () => {
           
           <button
             onClick={handleExport}
-            className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
+            className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition"
           >
             <Download size={18} />
             Export
@@ -450,7 +450,7 @@ const PartnershipDashboard = () => {
           
           <button
             onClick={() => setShowAddModal(true)}
-            className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            className="flex items-center gap-2 bg-red-800 text-white px-4 py-2 rounded-lg hover:bg-red-900 transition"
           >
             <Plus size={18} />
             Add Contact
@@ -492,11 +492,11 @@ const PartnershipDashboard = () => {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {contact.formSubmitted ? (
-                      <span className="flex items-center gap-1 text-green-600 font-medium text-sm">
+                      <span className="flex items-center gap-1 text-red-600 font-medium text-sm">
                         <CheckCircle size={16} /> Submitted
                       </span>
                     ) : (
-                      <span className="flex items-center gap-1 text-yellow-600 font-medium text-sm">
+                      <span className="flex items-center gap-1 text-gray-600 font-medium text-sm">
                         <Clock size={16} /> Pending
                       </span>
                     )}
@@ -507,15 +507,15 @@ const PartnershipDashboard = () => {
                       <button 
                         onClick={() => handleSendToContact(contact.id, contact.stage)}
                         disabled={isSending}
-                        className="text-green-600 hover:text-green-800 disabled:opacity-50" 
+                        className="text-red-700 hover:text-red-900 disabled:opacity-50" 
                         title="Send Email"
                       >
                         <Send size={18} />
                       </button>
-                      <button className="text-blue-600 hover:text-blue-800" title="View Details">
+                      <button className="text-gray-700 hover:text-gray-900" title="View Details">
                         <Eye size={18} />
                       </button>
-                      <button className="text-red-600 hover:text-red-800" onClick={() => handleDeleteContact(contact.id)} title="Delete">
+                      <button className="text-red-700 hover:text-red-900" onClick={() => handleDeleteContact(contact.id)} title="Delete">
                         <Trash2 size={18} />
                       </button>
                     </div>
@@ -566,7 +566,7 @@ const PartnershipDashboard = () => {
                   setSelectedSubmission(submission);
                   setShowPhotoModal(true);
                 }}
-                className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2"
+                className="w-full bg-red-800 text-white py-2 rounded-lg hover:bg-red-900 transition flex items-center justify-center gap-2"
               >
                 <Eye size={18} />
                 View All Photos
@@ -593,15 +593,15 @@ const PartnershipDashboard = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-red-800 to-gray-900 bg-clip-text text-transparent">
                 Partnership Outreach
               </h1>
               <p className="text-sm text-gray-600 mt-1">Manage your email automation campaign</p>
             </div>
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 bg-green-50 px-3 py-2 rounded-lg">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-green-700">N8N Connected</span>
+              <div className="flex items-center gap-2 bg-red-50 px-3 py-2 rounded-lg">
+                <div className="w-2 h-2 bg-red-800 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium text-red-900">N8N Connected</span>
               </div>
             </div>
           </div>
@@ -616,7 +616,7 @@ const PartnershipDashboard = () => {
               onClick={() => setActiveTab('dashboard')}
               className={`py-4 px-1 border-b-2 font-medium text-sm transition ${
                 activeTab === 'dashboard'
-                  ? 'border-blue-500 text-blue-600'
+                  ? 'border-red-800 text-red-800'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >
@@ -629,7 +629,7 @@ const PartnershipDashboard = () => {
               onClick={() => setActiveTab('contacts')}
               className={`py-4 px-1 border-b-2 font-medium text-sm transition ${
                 activeTab === 'contacts'
-                  ? 'border-blue-500 text-blue-600'
+                  ? 'border-red-800 text-red-800'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >
@@ -642,7 +642,7 @@ const PartnershipDashboard = () => {
               onClick={() => setActiveTab('submissions')}
               className={`py-4 px-1 border-b-2 font-medium text-sm transition ${
                 activeTab === 'submissions'
-                  ? 'border-blue-500 text-blue-600'
+                  ? 'border-red-800 text-red-800'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
               }`}
             >
@@ -672,7 +672,7 @@ const PartnershipDashboard = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
                 <input
                   type="email"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent"
                   value={newContact.email}
                   onChange={(e) => setNewContact({ ...newContact, email: e.target.value })}
                   placeholder="business@example.com"
@@ -682,7 +682,7 @@ const PartnershipDashboard = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Business Name *</label>
                 <input
                   type="text"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent"
                   value={newContact.businessName}
                   onChange={(e) => setNewContact({ ...newContact, businessName: e.target.value })}
                   placeholder="Tech Solutions Inc"
@@ -692,7 +692,7 @@ const PartnershipDashboard = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Industry</label>
                 <input
                   type="text"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent"
                   value={newContact.industry}
                   onChange={(e) => setNewContact({ ...newContact, industry: e.target.value })}
                   placeholder="Technology, Marketing, etc."
@@ -702,7 +702,7 @@ const PartnershipDashboard = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Contact Person</label>
                 <input
                   type="text"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent"
                   value={newContact.contactPerson}
                   onChange={(e) => setNewContact({ ...newContact, contactPerson: e.target.value })}
                   placeholder="John Doe"
@@ -713,7 +713,7 @@ const PartnershipDashboard = () => {
               <button
                 onClick={handleAddContact}
                 disabled={isLoading}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+                className="flex-1 bg-red-800 text-white px-4 py-2 rounded-lg hover:bg-red-900 transition disabled:opacity-50 disabled:cursor-not-allowed font-medium"
               >
                 {isLoading ? 'Adding...' : 'Add Contact'}
               </button>
@@ -763,7 +763,7 @@ const PartnershipDashboard = () => {
                   setShowPhotoModal(false);
                   setSelectedSubmission(null);
                 }}
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-medium"
+                className="bg-red-800 text-white px-6 py-2 rounded-lg hover:bg-red-900 transition font-medium"
               >
                 Close
               </button>
@@ -822,10 +822,10 @@ const PartnershipDashboard = () => {
               })}
             </div>
 
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
               <div className="flex items-start gap-3">
-                <AlertCircle className="text-blue-600 mt-0.5" size={20} />
-                <div className="text-sm text-blue-800">
+                <AlertCircle className="text-red-800 mt-0.5" size={20} />
+                <div className="text-sm text-red-900">
                   <p className="font-semibold mb-1">Important Notes:</p>
                   <ul className="list-disc list-inside space-y-1 text-xs">
                     <li>Emails will be sent to all contacts at the selected stage</li>
@@ -853,3 +853,4 @@ const PartnershipDashboard = () => {
 };
 
 export default PartnershipDashboard;
+
